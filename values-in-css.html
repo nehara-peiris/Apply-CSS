@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Values In CSS</title>
+</head>
+
+    <style>
+        div{
+            background-color: red;
+            width: 69px;
+            height: 69px;
+        }
+
+        /*Absolute measurement unit*/
+        div:first-child{
+            background-color: red;
+            width: 200px;
+            height: 100px;
+        }
+
+        /*Relative measurement unit -- Try this by reducing the screen size after running*/
+        div:nth-child(2){
+            background-color: blue;
+            width: 50vw;
+            height: 50vh;
+        }
+
+        section{
+            font-size: 20px;
+        }
+
+        section>div{
+            font-size: 2em; /*    2em = 2*parent = 2*30 = 60px    */
+        }
+
+        section>div{
+            font-size: 2rem; /*    2em = 2*parent = 2*30 = 60px    */
+        }
+
+        #mydiv{
+            width: 200px;
+            height: 100px;
+            background-color: gold;
+        }
+
+        #mydiv>div{
+            width: 50%;
+            height: 50%;
+            background-color: red;
+        }
+
+    </style>
+
+
+<body>
+
+    <div id="mydiv">
+        <div></div>
+    </div>
+
+
+    <section>
+        IJSE
+        <div>Internet Technologies</div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!--External CSS-->
+    <link rel="stylesheet" href="assets/style/style.css">
+
+
+    <title>CSS</title>
+
+    <!--Internal CSS-->
+    <style>
+
+        /*-----Type selector-----*/
+        h2{
+            color: green;
+        }
+
+
+        /*-----ID selector-----*/
+        #my-topic{
+            background: skyblue;
+        }
+
+
+        /*-----Type selector-----*/
+        .my-class{
+            background: yellow;
+        }
+
+
+        /*-----Universal selector-----*/
+        *{
+            color: deepskyblue;
+        }
+
+
+        /*-----Attribute Selector-----*/
+        /*attribute name & value*/
+        [href="https://ijse.lk"]{
+            color: gold;
+        }
+
+        /*start value ( ^= )*/
+        [href^="https"]{
+            font-weight: bold;
+        }
+
+        /*end value ( $= )*/
+        [href$=".com"]{
+            background: red;
+        }
+
+        /*value snippet*/
+        [href*="abc"]{
+            background: orange;
+        }
+
+        /*word in value*/
+        [href~= "ijse"]{
+            color: green;
+        }
+
+        .h301[name$="lk"]{
+            color: mediumpurple;
+        }
+
+
+        /*-----Pseudo class selector-----*/
+        h1:hover{
+            color: hotpink;
+        }
+
+        h1:active{
+            color: mediumslateblue;
+        }
+
+        a:link{
+            color: red;
+        }
+
+        a:visited{
+            color: green;
+        }
+
+        input:focus{
+            background: yellow;
+        }
+
+
+        /*select via the element tree structure*/
+        li:first-child{
+            color: red;
+            background: skyblue;
+        }
+
+        li:last-child{
+            color: darkblue;
+            background: blanchedalmond;
+        }
+
+        li:nth-child(3){
+            color: mediumpurple;
+            background: palegreen;
+        }
+
+        li:nth-last-child(2){
+            color: powderblue;
+            background: mediumseagreen;
+        }
+
+
+     /*li:nth-child(odd){
+         color: hotpink;
+         background: lightpink;
+     }*/
+
+    /* li:nth-child(even){
+         color: hotpink;
+         background: lightpink;
+     }*/
+
+     /*li:nth-child(n+4){
+         color: hotpink;
+         background: lightpink;
+     }*/
+
+     /*li:nth-child(3n-1){
+         color: hotpink;
+         background: lightpink;
+     }*/
+
+     /*li:nth-child(3n+1){
+         color: hotpink;
+         background: lightpink;
+     }*/
+
+     /*li:nth-child(4n){
+         color: hotpink;
+         background: lightpink;
+     }*/
+
+
+     h1::before{
+         content: "✨ ";
+     }
+
+     h1::after{
+         content: " 🍃 ";
+     }
+
+     p::first-line{
+         font-weight: bold;
+         background: gray   ;
+
+     }
+
+     h1:hover::before{
+         background: pink;
+     }
+
+     input{
+         color: mediumseagreen;
+     }
+
+     input::placeholder{
+         color: hotpink;
+     }
+
+     #my-file{
+         color: red;
+     }
+
+     input[type="file"]::file-selector-button{
+         background: blue;
+     }
+
+     p::selection{
+         color: blue;
+         background: red;
+     }
+
+     li::marker{
+         content: "✨";
+     }
+
+     h1, #my-topic, .h301, ul {
+         font-weight: bold;
+     }
+
+    </style>
+
+
+</head>
+<body>
+    <!--Inline CSS-->
+   <h1>IJSE - Institute of Software Engineering</h1>
+
+    <h2 id="my-topic">Welcome to Internet Technologies</h2>
+    <p class="my-class">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur consequatur, consequuntur dolore error et facilis fuga ipsam laborum libero, nam non numquam obcaecati officia perspiciatis quaerat quasi quidem, sapiente.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur consequatur, consequuntur dolore error et facilis fuga ipsam laborum libero, nam non numquam obcaecati officia perspiciatis quaerat quasi quidem, sapiente. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur consequatur, consequuntur dolore error et facilis fuga ipsam laborum libero, nam non numquam obcaecati officia perspiciatis quaerat quasi quidem, sapiente.</p>
+
+
+    <h2>Welcome to Internet Technologies</h2>
+    <p class="my-class">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet animi blanditiis enim ex iste quidem recusandae, sapiente unde velit! Atque consequatur, ea et explicabo obcaecati officiis quaerat sunt voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet animi blanditiis enim ex iste quidem recusandae, sapiente unde velit! Atque consequatur, ea et explicabo obcaecati officiis quaerat sunt voluptatum?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet animi blanditiis enim ex iste quidem recusandae, sapiente unde velit! Atque consequatur, ea et explicabo obcaecati officiis quaerat sunt voluptatum?</p>
+
+
+    <a href="https://ijse.lk">IJSE1</a><br>
+    <a href="http://ijse.lk">IJSE2</a><br>
+    <a href="https://abc.com">ABC</a><br>
+    <a href="http:// ijse .lk">IJSE3</a><br>
+    <a href="http:// ijse .lk">IJSE4</a><br>
+
+    <h3 class="h301"> H3 01</h3>
+    <h3 class="h301" name="hello.lk"> H3 02</h3>
+    <h3 class="h301" name="H303.lk"> H3 03</h3>
+
+    <a href="https://sirasatv.lk">Sirasa Tv</a><br>
+    <a href="https://hirutv.lk">Hiru Tv</a><br>
+    <a href="https://supremetv.lk">Supreme Tv</a><br><br>
+
+
+    <input type="text" placeholder="Enter your name"><br><br>
+
+    <input type="file" id="my-file">
+
+
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+        <li>E</li>
+        <li>F</li>
+    </ul>
+
+
+</body>
+</html>
